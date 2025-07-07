@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout } from "../ui/layout";
+import { Layout } from "../../ui/layout/layout";
 
 const EducationSection = ({ data, onChange }) => (
   <Layout>

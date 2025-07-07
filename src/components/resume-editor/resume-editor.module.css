@@ -1,0 +1,23 @@
+.editor {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.light {
+  --bg-color: #f5f5f5;
+  --text-color: #333;
+  --panel-bg: #fff;
+  --border-color: #444;
+  --hover-color: #f0f0f0;
+  --section-bg: #fff;
+}
+
+.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --panel-bg: #2d2d2d;
+  --border-color: #ddd;
+  --hover-color: #3a3a3a;
+  --section-bg: #333;
+}

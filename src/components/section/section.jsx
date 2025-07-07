@@ -1,9 +1,10 @@
 import { useDrag, useDrop } from "react-dnd";
-import ExperienceSection from "../sections/ExperienceSection.jsx";
-import EducationSection from "../sections/EducationSection.jsx";
-import SkillsSection from "../sections/SkillsSection.jsx";
-import CertificatesSection from "../sections/CertificatesSection.jsx";
-import AboutSection from "../sections/AboutSection.jsx";
+import ExperienceSection from "../sections/experience/experience-section.jsx";
+import EducationSection from "../sections/education/education-section.jsx";
+import SkillsSection from "../sections/skills/skills-section.jsx";
+import CertificatesSection from "../sections/certificates/certificates-section.jsx";
+import AboutSection from "../sections/about/about-section.jsx";
+import styles from "./section.module.css";
 
 const ItemTypes = {
   SECTION: "section",
@@ -63,9 +64,9 @@ export const Section = ({
     <div
       ref={(node) => drag(drop(node))}
       style={{ opacity }}
-      className="section-editor"
+      className={styles.editor}
     >
-      <div className="section-header">
+      <div className={styles.header}>
         <h3>
           {
             {
@@ -77,7 +78,12 @@ export const Section = ({
             }[section.type]
           }
         </h3>
-        <button onClick={() => removeSection(section.id)}>×</button>
+        <button
+          className={styles.button}
+          onClick={() => removeSection(section.id)}
+        >
+          ×
+        </button>
       </div>
 
       {renderSectionForm(section, updateSection)}

@@ -1,0 +1,50 @@
+.panel {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+  overflow-y: auto;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.controls select,
+.controls button {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  background-color: var(--section-bg);
+  color: var(--text-color);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.disabled::after {
+  content: "Секция уже существует";
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  background: #ffe24f;
+  color: #444;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s linear 1s;
+  z-index: 2;
+}
+
+.disabled:hover::after {
+  opacity: 1;
+}

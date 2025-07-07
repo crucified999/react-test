@@ -1,0 +1,32 @@
+.panel {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.preview {
+  width: 210mm;
+  min-height: 297mm;
+  background-color: var(--panel-bg);
+  padding: 20mm;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+}
+
+.section {
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  color: var(--text-color);
+  background-color: var(--section-bg);
+}
+
+.section h2 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}

@@ -1,0 +1,19 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.layout input,
+.layout textarea {
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--section-bg);
+  color: var(--text-color);
+}
+
+.layout textarea {
+  min-height: 80px;
+  resize: vertical;
+}

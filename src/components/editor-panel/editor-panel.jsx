@@ -1,5 +1,6 @@
 import React from "react";
-import { SectionList } from "../section-list/SectionList";
+import { SectionList } from "../section-list/section-list";
+import styles from "./editor-panel.module.css";
 
 export const EditorPanel = ({
   sections,
@@ -14,8 +15,8 @@ export const EditorPanel = ({
   setDarkMode,
   Section,
 }) => (
-  <div className="editor-panel">
-    <div className="controls">
+  <div className={styles.panel}>
+    <div className={styles.controls}>
       <select
         value={newSectionType}
         onChange={(e) => setNewSectionType(e.target.value)}
@@ -29,7 +30,7 @@ export const EditorPanel = ({
       <button
         onClick={addSection}
         disabled={isSectionExists}
-        className={`${isSectionExists ? "add-section_btn_disabled" : ""}`}
+        className={`${isSectionExists ? styles.disabled : ""}`}
       >
         Добавить секцию
       </button>

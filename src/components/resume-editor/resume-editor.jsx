@@ -3,7 +3,8 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { Section } from "../section";
 import { PreviewPanel } from "../preview-panel/preview-panel";
-import { EditorPanel } from "../editor-panel/EditorPanel";
+import { EditorPanel } from "../editor-panel/editor-panel";
+import styles from "./resume-editor.module.css";
 
 export const ResumeEditor = () => {
   const [sections, setSections] = useState([]);
@@ -82,7 +83,7 @@ export const ResumeEditor = () => {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <div className={`resume-editor ${darkMode ? "dark" : "light"}`}>
+      <div className={`${styles.editor} ${darkMode ? styles.dark : styles.light}`}>
         <EditorPanel
           sections={sections}
           newSectionType={newSectionType}
